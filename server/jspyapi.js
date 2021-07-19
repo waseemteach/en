@@ -5,7 +5,7 @@ function saveRequest(prjName, data){
     $httper = new XMLHttpRequest;
     this.result2 = {status2: false, result2: "none"};
     if ($httper.readyState == 4 || $httper.readyState == 0){
-        $httper.open("GET", "http://waseemssaeed.pythonanywhere.com/save/"+prjName+"/"+data, true);
+        $httper.open("GET", "https://waseemssaeed.pythonanywhere.com/save/"+prjName+"/"+data, true);
         $httper.onreadystatechange = ()=>{
             if ($httper.readyState == 4)
             {
