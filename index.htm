@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/items.css">
+    <link rel="stylesheet" href="./style/navbar.css">
+    <link rel="stylesheet" href="./style/screen1.css">
+    <link rel="stylesheet" href="./style/screen2.css">
+    <link rel="stylesheet" href="./style/loading.css">
+
+    <title>Waseem Teaching</title>
+</head>
+<body onload="ready()">
+    <div id="navbar">
+        <button class="nbBtn">About</button>
+        <button class="nbBtn">Topics</button>
+        <button class="nbBtn">PDFs</button>
+    </div>
+    <div id="navbarMargin"></div>
+    <div id="screen1" class="screen">
+        <div id="sc1BG">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="sc1Content">
+            <img src="./me.png" style="width: 50%; border: 2px solid white; border-radius: 50%; margin-bottom: -10px;" alt=""> <br><br>
+            <h1>
+                I'm Waseem, I teach my topics <mark>online in person directly</mark>
+            </h1>
+            <input placeholder="Email..." type="text" class="textbox">
+            <button>start learn something</button>
+        </div>
+    </div>
+    <div id="screen2" class="screen">
+        <div class="card">
+            <img src="./download (1).png" class="cardImg" alt="">
+            <span id="course1Title" class="cardTitle">Cloud Programming Using Python</span>
+            <span class="cardAbout">After you finish the sessions you will have a covering idea about executing a web server using python</span>
+            <div class="cardOffers">
+                <span class="sporto3">Y</span> Free 20 Hrs mentoring for 1 Month after the course (renewable for 71% discount) <br>
+                <span class="sporto1">h</span> Free Notes & Notes version updates for 18 Months. <br>
+                <span class="sporto3">L</span> Projects opportiunity <br>
+            </div>
+            <span id="course1Price" class="price">199.99$</span>
+            <textarea id="course1Contact" style="width: 95%; height: unset; resize: vertical; margin-bottom: 0px;" placeholder="Type Google Meets Email or Your Preffered Contact method..." type="text" class="textbox"></textarea>
+            <label class="warn" for="">please do NOT use pure phone call, for me, i preffere google meets, but you have the final choice <span class="sporto2">O</span> </label>
+            <button onclick="submitReq('course1', 'setup call')">Free setup call</button>
+            <button onclick="submitReq('course1', 'start')">schudule your sessions</button>
+            <br><br>
+        </div>
+        <div class="card">
+            <img src="./worldch.PNG" class="cardImg" alt="">
+            <span id="course2Title" class="cardTitle">Statics & Mechanical Structures Calculations</span>
+            <span class="cardAbout">After you finish the sessions you will have a covering idea about executing a web server using python</span>
+            <div class="cardOffers">
+                <span class="sporto3">Y</span> Free 20 Hrs mentoring for 1 Month after the course (renewable for 71% discount) <br>
+                <span class="sporto1">h</span> Free Notes & Notes version updates for 18 Months. <br>
+                <span class="sporto3">L</span> Projects opportiunity <br>
+            </div>
+            <span id="course2Price" class="price">71.99$</span>
+            <textarea id="course2Contact" style="width: 95%; height: unset; resize: vertical; margin-bottom: 0px;" placeholder="Type Google Meets Email or Your Preffered Contact method..." type="text" class="textbox"></textarea>
+            <label class="warn" for="">please do NOT use pure phone call, for me, i preffere google meets, but you have the final choice <span class="sporto2">O</span> </label>
+            <button onclick="submitReq('course2', 'setup call')">Free setup call</button>
+            <button onclick="submitReq('course2', 'start')">schudule your sessions</button>
+            <br><br>
+        </div>
+    </div>
+    <div id="footer">
+        Waseem Saeed Twitter @WaseemSSaeed
+    </div>
+    <div id="loadingDiv">
+        <span id="loadingSign"></span>
+    </div>
+</body>
+</html>
+
+<script src="./pythonServer/jspyapi.js"></script>
+<script>
+    //saveRequest("filename", "data");
+    function submitReq(reqID, type){
+        courseTitle = document.getElementById(reqID + "Title").innerHTML;
+        coursePrice = document.getElementById(reqID + "Price").innerHTML;
+        courseContact = document.getElementById(reqID + "Contact").value;
+        _type = type;
+        _data = [{contact: courseContact, price: coursePrice, title: courseTitle, type: _type}];
+        _filename = "req" + Math.random(Math.sin(Math.tanh(Math.random(71070))));
+        saveRequest(_filename, JSON.stringify(_data));
+    }
+
+    function ready(){
+        document.getElementById("loadingDiv").style.visibility = "hidden";
+    }
+</script>
