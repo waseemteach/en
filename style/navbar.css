@@ -1,0 +1,26 @@
+#navbar{
+    position: fixed;
+    width: 100%;
+    height: 0.6in;
+    background-color: white;
+    z-index: 1;
+}
+#navbarMargin{
+    height: 0.6in;
+}
+
+.nbBtn{
+    width: 32.5%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    border-radius: 0px;
+}
+.nbBtn:hover{
+    background-color: teal;
+    color: white;
+}

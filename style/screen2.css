@@ -1,0 +1,58 @@
+#screen2{
+    display: flex;
+    flex-wrap: wrap;
+}
+#screen2 .card{
+    flex-basis: calc(3in - 10px);
+    background-color: steelblue;
+    background-color: cornflowerblue;
+    box-shadow: 0px 0px 2px 0px rgb(64, 64, 64);
+    border-radius: 30px;
+    padding-top: 5px;
+    align-items: center;
+    margin-left: 0.18in;
+    margin-top: 0.2in;
+    padding: 5px;
+}
+
+.card button{
+    margin: 0px;
+    margin-top: 5px;
+}
+.cardImg{
+    width: 94%;
+    margin-left: 2%; margin-right: 2%;
+    margin-top: 0.1in;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.cardTitle{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    display: block;
+}
+.cardAbout{
+    display: block;
+    color: white;
+}
+
+.price{
+    display: block;
+    border-radius: 10px;
+    color: white;
+    background-color: chocolate;
+    width: 0.8in;
+    text-align: center;
+    margin: 5px;
+}
+
+.cardOffers{
+    width: 88%;
+    margin-left: 10%;
+    color: white;
+}
+.cardOffers .sporto1, .cardOffers .sporto2, .cardOffers .sporto3, .cardOffers .sporto4, .cardOffers .sporto5, .cardOffers .sporto6{
+    margin-left: -10px;
+}
