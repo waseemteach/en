@@ -40,8 +40,8 @@
             <h1>
                 I'm Waseem, I teach my topics <mark>online in person directly</mark>
             </h1>
-            <input placeholder="Email..." type="text" class="textbox">
-            <button>start learn something</button>
+            <input placeholder="Email..." type="text" id="userContact" class="textbox">
+            <button onclick="requpdates()">get updates</button>
         </div>
     </div>
     <div id="screen2" class="screen">
@@ -99,7 +99,12 @@
         _filename = "req" + Math.random(Math.sin(Math.tanh(Math.random(71070))));
         saveRequest(_filename, JSON.stringify(_data));
     }
-
+    function requpdates(){
+        contact = document.getElementById("userContact").value;
+        _data = [{contact: contact, type: "getupdates"}];
+        _filename = "getupdate" + Math.random(Math.sin(Math.tanh(Math.random(71070))));
+        saveRequest(_filename, JSON.stringify(_data));
+    }
     function ready(){
         document.getElementById("loadingDiv").style.visibility = "hidden";
     }
