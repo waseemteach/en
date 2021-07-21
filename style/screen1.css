@@ -75,11 +75,12 @@
         margin-right: 20vw;
     }
     #meimg{
-        width: 2in;
+        width: 1.5in;
     }
     #useremailtofollow{
         width: 4in;
         display: block;
         margin-right: calc(50% - 2in);
+        margin-left: calc(50% - 2in);
     }
 }
