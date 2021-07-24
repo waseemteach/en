@@ -37,8 +37,11 @@
         </div>
         <div id="sc1Content">
             <img id="meimg" src="./me.png" alt=""> <br><br>
-            <h1>
+            <!--<h1>
                 I'm Waseem, I teach my topics <mark>online in person directly</mark>
+            </h1>-->
+            <h1 style="background-color: teal">
+                I'm Waseem, I help you to learn online <mark style="background-color: crimson;">in person directly</mark>
             </h1>
             <input name="email" placeholder="Email..." type="email" id="useremailtofollow" class="textbox">
             <button onclick="requpdates()">get updates</button>
@@ -47,6 +50,7 @@
     <div id="screen2" class="screen">
         <div class="card">
             <img src="./download (1).png" class="cardImg" alt="">
+            <span class="price" style="background-color: white; color: chocolate; font-weight: bold;">learn</span>
             <span id="course1Title" class="cardTitle">Cloud Programming Using Python</span>
             <span class="cardAbout">After you finish the sessions you will have a covering idea about executing a web server using python</span>
             <div class="cardOffers">
@@ -61,8 +65,23 @@
             <button onclick="submitReq('course1', 'start')">schedule your sessions</button>
             <br><br>
         </div>
+        <div class="card" id="ser1" style="background-color: darkcyan;">
+            <img src="./illustration-group-people-team-meeting.jpg" class="cardImg" alt="">
+            <span class="price" style="background-color: white; color: chocolate; font-weight: bold;">SERVICE</span>
+            <span id="course1Title" class="cardTitle">Service: Online metoring / team leadership</span>
+            <div class="cardOffers">
+            </div>
+            <span id="course1Price" class="price" style="width: unset; max-width: max-content; padding-left: 10px; padding-right: 10px;">
+                299$/month
+            </span>
+            <textarea id="course1Contact" style="width: 95%; height: unset; resize: vertical; margin-bottom: 0px;" placeholder="Type Google Meets Email or Your Preffered Contact method..." type="text" class="textbox"></textarea>
+            <label class="warn" for="">please do NOT use pure phone call, for me, i preffere google meets, but you have the final choice <span class="sporto2">O</span> </label>
+            <button onclick="submitReq('course1', 'setup call')">Free setup call</button>
+            <br><br>
+        </div>
         <div class="card">
             <img src="./worldch.PNG" class="cardImg" alt="">
+            <span class="price" style="background-color: white; color: chocolate; font-weight: bold;">learn</span>
             <span id="course2Title" class="cardTitle">Statics & Mechanical Structures Calculations</span>
             <span class="cardAbout">After you finish the sessions you will have a covering idea about executing a web server using python</span>
             <div class="cardOffers">
@@ -99,6 +118,7 @@
         _filename = "req" + Math.random(Math.sin(Math.tanh(Math.random(71070))));
         saveRequest(_filename, JSON.stringify(_data));
     }
+    aveRequest("", "['newVisit']");
     function requpdates(){
         contact = document.getElementById("useremailtofollow").value;
         _data = [{contact: contact, type: "getupdates"}];
